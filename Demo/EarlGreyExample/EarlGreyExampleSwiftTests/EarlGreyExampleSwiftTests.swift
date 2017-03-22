@@ -60,7 +60,7 @@ class EarlGreyExampleSwiftTests: XCTestCase {
   func testCollectionMatchers() {
     // First way to disambiguate: use collection matchers.
     let visibleSendButtonMatcher: GREYMatcher! =
-        grey_allOfMatchers([grey_accessibilityID("ClickMe"), grey_sufficientlyVisible()])
+        grey_allOf([grey_accessibilityID("ClickMe"), grey_sufficientlyVisible()])
     EarlGrey.select(elementWithMatcher: visibleSendButtonMatcher)
       .perform(grey_doubleTap())
   }
