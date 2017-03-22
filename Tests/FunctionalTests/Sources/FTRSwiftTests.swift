@@ -161,7 +161,7 @@ class FTRSwiftTests: XCTestCase {
     // Verify description in custom matcher isn't nil.
     // unexpectedly found nil while unwrapping an Optional value
     EarlGrey.select(elementWithMatcher: grey_allOf([grey_firstElement(),
-                                                            grey_text("FooText")]))
+                                                    grey_text("FooText")]))
       .assert(grey_nil())
   }
 
@@ -224,7 +224,7 @@ class FTRSwiftTests: XCTestCase {
     EarlGrey.select(elementWithMatcher: grey_kindOfClass(UITableView.self))
       .perform(grey_scrollToContentEdge(GREYContentEdge.top))
     EarlGrey.select(elementWithMatcher: grey_allOf([grey_accessibilityLabel(name),
-                                                            grey_interactable()]))
+                                                    grey_interactable()]))
       .using(searchAction: grey_scrollInDirection(GREYDirection.down, 200),
              onElementWithMatcher: grey_kindOfClass(UITableView.self))
       .perform(grey_tap())
